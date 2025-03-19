@@ -1,6 +1,11 @@
 # Use the Python 3.13 image
 FROM python:3.13-slim
 
+LABEL name="httpdump"
+LABEL version="0.1"
+LABEL description="A simple HTTP-to-Console tool."
+LABEL org.blackhearttf.vendor="black.heart"
+
 # User modifiable port
 ENV PORT=80
 
