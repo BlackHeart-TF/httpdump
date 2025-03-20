@@ -33,8 +33,9 @@ class RequestLogger(BaseHTTPRequestHandler):
         content_length = int(self.headers.get('Content-Length', 0))
         if content_length:
             post_data = self.rfile.read(content_length)
-            logging.info("Body:")
-            logging.info(post_data.decode())
+            print("Body:")
+            print(post_data.decode("utf-8", errors="replace"))
+
 
         # Send response
         self.send_response(200)
